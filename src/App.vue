@@ -18,6 +18,10 @@ const urls = ref<RouteMap[]>([
     to: { name: 'home' },
   },
   {
+    name: 'Test',
+    to: { name: 'test' },
+  },
+  {
     name: 'About',
     target: '_blank',
     to: { name: 'about' },
@@ -33,12 +37,7 @@ const urls = ref<RouteMap[]>([
 <template>
   <header>
     <nav class="nav">
-      <RouterLink
-        class="router-link"
-        v-for="(url, index) in urls"
-        v-bind="url"
-        :key="index"
-      >
+      <RouterLink class="router-link" v-for="(url, index) in urls" :key="index">
         {{ url.name }}
       </RouterLink>
     </nav>
