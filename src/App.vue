@@ -2,6 +2,10 @@
 import { ref } from 'vue';
 import { RouterLink, RouterView } from 'vue-router';
 
+// Do not modify interfaces.
+// RouterLink should create links based on the 'urls' array.
+// Links should retrieve their name both path and name, and some should have the attribute 'target="_blank"'.
+
 export interface RouteMap {
   name: string;
   target?: string;
